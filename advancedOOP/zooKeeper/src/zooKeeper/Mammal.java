@@ -10,8 +10,12 @@ public class Mammal {
 	public Mammal() {
 		this.setName("mammal");
 		this.energyLevel = 100;
+		
 	}
 	
+	public Mammal(int energy) {
+		this.energyLevel = energy;
+	}
 	
 	
 	/// ###################### Methods ########################
