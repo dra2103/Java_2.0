@@ -43,8 +43,8 @@ public class Order {
         return this.items;
     }
 
-    public void setItems(ArrayList<Item> items){
-        this.items = items;
+    public void setItems(Item items){
+        this.items.add(items);
     }
 
     // ################ Methods ####################
