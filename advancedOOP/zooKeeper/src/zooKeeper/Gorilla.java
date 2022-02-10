@@ -2,7 +2,18 @@ package zooKeeper;
 
 public class Gorilla extends Mammal {
 	
+	// constructor
+	public Gorilla() {
+		
+	}
 	
+	public Gorilla(int energy) {
+		super(energy);
+	}
+	
+	
+ 
+	// ############ Methods ##############
 	public void throwSomething() {
 		this.setEnergyLevel(getEnergyLevel()-5);
 		System.out.println("The Gorilla has thrown something:");
@@ -11,7 +22,7 @@ public class Gorilla extends Mammal {
 	
 	public void eatBananas() {
 		this.setEnergyLevel(getEnergyLevel()+ 10);
-		System.out.println("Mmmm goooood:");
+		System.out.println("Mmmm goooood:" );
 		
 	}
 	

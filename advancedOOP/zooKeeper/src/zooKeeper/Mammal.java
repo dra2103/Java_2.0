@@ -6,10 +6,11 @@ public class Mammal {
 	private int energyLevel;
 	
 	
+	
 	//  ###################### Constructors ################### 
 	public Mammal() {
 		this.setName("mammal");
-		this.energyLevel = 100;
+		this.setEnergyLevel(100);
 		
 	}
 	
@@ -18,11 +19,12 @@ public class Mammal {
 	}
 	
 	
+	
 	/// ###################### Methods ########################
 	
 	public int displayEnergy() {
-		 System.out.println("Enegry Level is: " + getEnergyLevel());
-		 return getEnergyLevel();
+		 System.out.println("Enegry Level is: " + this.getEnergyLevel());
+		 return this.getEnergyLevel();
 		
 	}
 	
