@@ -12,7 +12,7 @@ public class HelloHumanController {
 		if(name == null) {
 			return "Hello Human";
 		}else if(lastname == null) {
-		return "Hello " + name;
+			return "Hello " + name;
 		}
 		else {
 			return "Hello " + name +" " + lastname;
