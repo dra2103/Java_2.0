@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hopper;s Receipt</title>
+<title>Hopper's Receipt</title>
 </head>
 <body>
 	<h1>Customer Name: <c:out value="${name }"></c:out></h1>
