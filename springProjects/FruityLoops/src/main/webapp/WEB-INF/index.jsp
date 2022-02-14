@@ -13,6 +13,7 @@
 <meta charset="UTF-8">
 <title>Fruity Loops</title>
 </head>
+
 <body>
 	<h1 class="text-center text-danger">Fruit Store</h1>
 	<table class="table container">
