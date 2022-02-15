@@ -9,10 +9,13 @@
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Counter</title>
+<title>Omikuji Show</title>
 </head>
 <body>
-	<h1>Counter equals: <c:out value="${count }"></c:out></h1>
-	<a href="/"> Test another visit</a>
-</body>
+	<h1>Here's Your Omikuji</h1>
+	
+	<p class="bg-primary">In <c:out value="${number }"/> years, you will live in <c:out value="${city} "/> 
+	with <c:out value="${name }"/> as your roommate, <c:out value="${hobbie }"/>. The next time you see a <c:out value="${living }"/>, 
+	you will have good luck.  Also, <c:out value="${kind }"/></p>
+	<a href="/">Go Back</a>
 </html>
