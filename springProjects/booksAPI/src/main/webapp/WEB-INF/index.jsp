@@ -26,7 +26,7 @@
 		<c:forEach items="${ books}" var="b">
 			<tr>
 				<td><c:out value="${b.getId() }"></c:out></td>
-				<td><c:out value="${b.getTitle()}"></c:out></td>
+				<td> <a href="/books/${b.id}"><c:out value="${b.getTitle()}"></c:out></a></td>
 				<td><c:out value="${b.getLanguage()}"></c:out></td> 
 				<td><c:out value="${b.getNumberOfPages()}"></c:out> </td>
 			</tr>	
