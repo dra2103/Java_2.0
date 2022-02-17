@@ -33,5 +33,6 @@
 		</c:forEach>
 	</tbody>
 </table>
+<a href="/books/new" class="container" >Create New Book</a>
 </body>
 </html>

@@ -11,7 +11,7 @@ import com.daniel.booksAPI.repos.BookRepo;
 @Service
 public class BookService {
 	
-    // adding the book repository as a dependency
+    // adding the book repo as a dependency
 	private final BookRepo bookRepository;
     
     public BookService(BookRepo bookRepository) {
