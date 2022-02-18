@@ -35,6 +35,7 @@ public class TravelController {
 		return "/index.jsp";
 	}
 	
+	// ############ create ####################
 	@PostMapping("/expenses/new")
 	public String create(@Valid @ModelAttribute("expenses")Travel expenses, BindingResult result, Model model) {
 		if (result.hasErrors()) {
@@ -47,6 +48,9 @@ public class TravelController {
 			
 		}
 	}
+	
+	// ############### edit expense ####################
+	
 	@RequestMapping("/expenses/{id}/edit")
 	public String edit(@PathVariable("id") Long id, Model model) {
 		Travel travel = travelService.findTravel(id);
@@ -69,4 +73,13 @@ public class TravelController {
         return "redirect:/expenses";
     }
 	
+	// Show one expense
+	
+    @RequestMapping("/expenses/{id}")
+    public String  index(@PathVariable("id") Long id, Model model) {
+        Travel expense = travelService.findTravel(id);
+        model.addAttribute("expense", expense);
+        return "/show.jsp";
+   
+    }
 }
