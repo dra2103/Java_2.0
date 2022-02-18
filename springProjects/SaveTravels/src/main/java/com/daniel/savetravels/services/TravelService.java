@@ -1,6 +1,7 @@
 package com.daniel.savetravels.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -21,9 +22,27 @@ public class TravelService {
 		return travelRepository.findAll();
 	}
 	
-	//create book
+	//create expense
 	public Travel createTravel(Travel t) {
 		return travelRepository.save(t);
 	}
 	
+	public Travel updateTravel(Travel t) {
+		return travelRepository.save(t);
+	}
+	
+	// retrieve expense
+	public Travel findTravel(Long id) {
+		Optional<Travel> optionalTravel = travelRepository.findById(id);
+		if(optionalTravel.isPresent()) {
+			return optionalTravel.get();
+		} else {
+			return null;
+		}
+	}
+	
+	public void deleteTravel(Long id) {
+		travelRepository.deleteById(id);
+		
+	}
 }
