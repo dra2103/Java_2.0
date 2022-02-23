@@ -27,6 +27,7 @@ public class TravelService {
 		return travelRepository.save(t);
 	}
 	
+	// update
 	public Travel updateTravel(Travel t) {
 		return travelRepository.save(t);
 	}
@@ -41,6 +42,7 @@ public class TravelService {
 		}
 	}
 	
+	// delete
 	public void deleteTravel(Long id) {
 		travelRepository.deleteById(id);
 		

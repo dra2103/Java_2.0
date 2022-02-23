@@ -55,12 +55,12 @@ public class Travel {
     	
     }
     
-    public Travel (String expense, String vendor, double amount, String description) {
-    	this.expense = expense;
-    	this.vendor = vendor;
-    	this.amount = amount;
-    	this.description = description;
-    }
+//    public Travel (String expense, String vendor, double amount, String description) {
+//    	this.expense = expense;
+//    	this.vendor = vendor;
+//    	this.amount = amount;
+//    	this.description = description;
+//    }
     
     // ############################ Created at Updated at Methods ##########################
     
@@ -73,6 +73,7 @@ public class Travel {
         this.updatedAt = new Date();
     }
 
+    
 	public Long getId() {
 		return id;
 	}

@@ -32,7 +32,7 @@ public class TravelController {
 	public String index(@ModelAttribute("expenses") Travel expenses, Model model) {
 		List<Travel> travel = travelService.allTravels();
 		model.addAttribute("travels", travel);
-		return "/index.jsp";
+		return "index.jsp";
 	}
 	
 	// ############ create ####################
@@ -58,6 +58,7 @@ public class TravelController {
 		return "edit.jsp";
 	}
 	
+	
     @PutMapping("/expenses/{id}")
     public String update(@Valid @ModelAttribute("exp") Travel exp, BindingResult result) {
         if (result.hasErrors()) {
@@ -67,6 +68,7 @@ public class TravelController {
             return "redirect:/expenses";
         }
     }
+    
     @DeleteMapping("/expenses/{id}")
     public String destroy(@PathVariable("id") Long id) {
         travelService.deleteTravel(id);

@@ -49,9 +49,9 @@
 	<form:form action="/expenses/new" method="post"
 		modelAttribute="expenses" class="form-control container">
 		<p>
-			<form:errors class="text-danger" path="expense" />
+			<form:errors class="text-danger" path="*" />
 		</p>
-		<p>
+<%-- 		<p>
 			<form:errors class="text-danger" path="vendor" />
 		</p>
 		<p>
@@ -59,7 +59,7 @@
 		</p>
 		<p>
 			<form:errors class="text-danger" path="description" />
-		</p>
+		</p> --%>
 		<div>
 			<form:label class="col-sm-1 col-form-label" path="expense">Expense Name:</form:label>
 			<form:input path="expense" />
