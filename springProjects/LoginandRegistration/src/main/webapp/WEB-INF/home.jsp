@@ -18,26 +18,11 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1 class="text-center"> <c:out value="${dojo.dojoName }"/> </h1>
-	<table>
-		<thead>
-			<tr>
-				<th>First Name:</th>
-				<th>Last Name: </th>
-				<th>Age:</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${dojo.ninjas } " var="ninja">
-				<tr>
-					<td> <c:out value="${ ninja}" /></td>
-					<td> <c:out value="${ ninja}" /></td>
-					<td> <c:out value="${ ninja}" /></td>
-				</tr>
-			
-			</c:forEach>
-		
-		</tbody>
-	</table>
+	<h1>Welcome!! <c:out value="${thisUser.getUserName() }"/>  </h1>
+	
+	<p>
+	<a href="/logout">logout</a>
+	</p>
+	
 </body>
 </html>
