@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!-- c:out ; c:forEach etc. --> 
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- Formatting (dates) --> 
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!-- form:form -->
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!-- for rendering errors on PUT routes -->
 <%@ page isErrorPage="true" %>
 <!DOCTYPE html>
@@ -19,6 +19,7 @@
 </head>
 <body>
 	<h1 class="text-center"> <c:out value="${dojo.dojoName }"/> </h1>
+	${dojo.getNinjas() }
 	<table>
 		<thead>
 			<tr>
@@ -28,16 +29,24 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${dojo.ninjas } " var="ninja">
+			<c:forEach items="${dojo.getNinjas() } " var="n">
 				<tr>
-					<td> <c:out value="${ ninja}" /></td>
-					<td> <c:out value="${ ninja}" /></td>
-					<td> <c:out value="${ ninja}" /></td>
+					<td> <c:out value="${ n}" /></td>
+					<td> <c:out value="${ n}" /></td>
+					<td> <c:out value="${ n}" /></td>
 				</tr>
 			
 			</c:forEach>
+	
 		
 		</tbody>
 	</table>
+	
+	<hr />
+	
+	<c:forEach items =" ${dojo.getNinjas() }" var="g">
+	<p>${g }</p>
+	
+	</c:forEach>
 </body>
 </html>

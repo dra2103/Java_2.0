@@ -46,9 +46,12 @@ public class Ninja {
     private Date createdAt;
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
-	
     
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "dojo_id")
+    private Dojo dojo;
+    
+	
     
     // ####################### Created at Updated at Methods #####################
     
@@ -61,11 +64,7 @@ public class Ninja {
         this.updatedAt = new Date();
     }
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dojo_id")
-    private Dojo dojo;
-    
-    
+
     
     // ########################## Constructors ##################
     

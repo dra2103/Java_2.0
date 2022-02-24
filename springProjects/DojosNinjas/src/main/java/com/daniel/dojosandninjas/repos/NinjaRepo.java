@@ -13,7 +13,7 @@ public interface NinjaRepo extends CrudRepository<Ninja, Long> {
 	// this method retrieves all the books from the database
     List<Ninja> findAll();
     
-    List<Ninja> findByDojo_id(Long id);
+//    List<Ninja> findByDojo_id(Long id);
     // this method finds books with descriptions containing the search string
 //    List<Ninja> findByDescriptionContaining(String search);
     // this method counts how many titles contain a certain string

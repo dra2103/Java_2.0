@@ -42,8 +42,8 @@ public class NinjaService {
 		}
 	}
 	
-	public List<Ninja> ninjasAtDojo(Long id) {
-		return ninjaRepo.findByDojo_id(id);
-	}
+//	public List<Ninja> ninjasAtDojo(Long id) {
+//		return ninjaRepo.findByDojo_id(id);
+//	}
 
 }

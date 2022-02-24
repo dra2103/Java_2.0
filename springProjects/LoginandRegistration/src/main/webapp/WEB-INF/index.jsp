@@ -20,31 +20,31 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Welcome!!</h1>
-	<h6>Join our growing community</h6>
-	<div class="container">
-		<div class="login-reg-main border-round">
+	<h1 class="text-center">Welcome!!</h1>
+	<h6 class="text-center">Join our growing community</h6>
+	<div class="d-flex container justify-content-around">
+		<div class="">
 			<h2>Register:</h2>
 			<form:form action="/register" method="post" modelAttribute="newUser">
-				<div>
+				<div class="mb-3">
 					<form:errors class="text-danger" path="userName" />
-					<form:label path="userName">User Name:</form:label>
-					<form:input path="userName" />
+					<form:label class="form-label" path="userName">User Name:</form:label>
+					<form:input class="form-control" path="userName" />
 				</div>
-				<div>
+				<div class="mb-3">
 					<form:errors class="text-danger" path="email" />
-					<form:label path="email">Email:</form:label>
-					<form:input path="email" />
+					<form:label class="form-label" path="email">Email:</form:label>
+					<form:input class="form-control" path="email" />
 				</div>
-				<div>
+				<div class="mb-3">
 					<form:errors class="text-danger" path="password" />
-					<form:label path="password">Password:</form:label>
-					<form:input path="password" />
+					<form:label class="form-label" path="password">Password:</form:label>
+					<form:password class="form-control" path="password" />
 				</div>
-				<div>
+				<div class="mb-3">
 					<form:errors class="text-danger" path="confirm" />
-					<form:label path="confirm">Confirm PW:</form:label>
-					<form:input path="confirm" />
+					<form:label class="form-label" path="confirm">Confirm PW:</form:label>
+					<form:password class="form-control" path="confirm" />
 				</div>
 				<input type="submit" value="Register" class="btn btn-primary" />
 			</form:form>
@@ -54,13 +54,13 @@
 			<form:form action ="/login" method="post" modelAttribute="newLogin">
 				<div>
 					<form:errors class="text-danger" path="email" />
-					<form:label path="email">Email:</form:label>
-					<form:input path="email" />
+					<form:label class="form-label" path="email">Email:</form:label>
+					<form:input class="form-control" path="email" />
 				</div>
 				<div>
 					<form:errors class="text-danger" path="password" />
-					<form:label path="password">Password:</form:label>
-					<form:input path="password" />
+					<form:label class="form-label" path="password">Password:</form:label>
+					<form:password class="form-control" path="password" />
 				</div>
 				<input type="submit" value="Login" class="btn btn-success" />
 			</form:form>

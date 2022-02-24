@@ -18,11 +18,51 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Welcome!! <c:out value="${thisUser.getUserName() }"/>  </h1>
-	
+	<div class="d-flex justify-content-around">
+		<h1>Welcome!! <c:out value="${thisUser.getUserName() }"/>  </h1>
+		
+		<p>
+		<a href="/logout">logout</a>
+		</p>
+	</div>
+	<div class="d-flex justify-content-around">
+	<p>Books from everyone's shelves:</p>
 	<p>
-	<a href="/logout">logout</a>
+	<a href="/books/new" class="btn btn-success">Create new book</a>
 	</p>
+	</div>
 	
+	<table class="table container">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Author Name</th>
+				<th>Posted By</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${ allBooks}" var="b">
+				<tr>
+					<td> ${b.id }</td>
+					<td> <a href="/books/${b.id }">${b.title }</a></td>
+					<td> ${b.author }</td>
+					<td> ${b.getUser().getUserName()}</td>
+					<c:if test="${b.user.id == thisUser.id }">
+						<td class="col-2"> 
+							<div class="d-flex">
+								<a href="/books/${b.id }/edit" class="btn btn-secondary">Edit</a>
+								<form action="/books/${b.id }/delete" method="post" >
+									<input type= "hidden" name="_method" value="delete">
+									<input type="submit" value="Delete" class="btn btn-danger" >
+								</form>
+							</div>
+						</td>
+					</c:if>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>

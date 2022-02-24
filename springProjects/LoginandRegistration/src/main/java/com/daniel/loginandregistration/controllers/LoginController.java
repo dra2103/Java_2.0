@@ -58,6 +58,7 @@ public class LoginController {
 						BindingResult result,
 						Model model,
 						HttpSession sesh) {
+		
 		User user = userServ.login(newLogin, result);
 		if (result.hasErrors()) {
 			model.addAttribute("newUser", new User());
@@ -68,24 +69,7 @@ public class LoginController {
 		}
 	}
 	
-	// -------- Logged in from here ----------
-	// home route
-	// can move this to other controller
-	
-	@GetMapping("/home")
-	public String home(HttpSession sesh, Model model) {
-		//retrieve the DB using session id
-		Long userId = (Long) sesh.getAttribute("user_id");
-		//check if userID is null
-		if (userId == null) {
-			return "redirect:/";
-		} else {
-			//go to the DB to retrieve the user using the id
-			User thisUser = userServ.findOne(userId);
-			model.addAttribute("thisUser", thisUser);
-			return "home.jsp";
-		}
-	}
+
 	
 	// Logout
 	@GetMapping("/logout")
